@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Menu vertical</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(to bottom, #dbeafe, #ffffff);
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav {
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 20px;
+      width: 200px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+
+    .menu-title {
+      font-weight: 600;
+      color: #333;
+      font-size: 22px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 15px;
+    }
+
+    a {
+      display: block;
+      padding: 10px 15px;
+      border-radius: 30px; /* coins très arrondis */
+      background: #6C63FF;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    a:hover {
+      background: #4a44cc;
+      transform: translateY(-2px);
+    }
+
+    .quit {
+      margin-top: 25px;
+    }
+
+    .quit a {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 25px;
+      background-color: #e74c3c;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .quit a:hover {
+      background-color: #c0392b;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="menu-title">Menu</div>
+    <ul>
+      <li><a href="presentation.html" target="fenêtrec">Présentation</a></li>
+      <li><a href="page2.html" target="fenêtrec">État Civil</a></li>
+      <li><a href="tableau.html" target="fenêtrec">Tableau</a></li>
+      <li><a href="formulaire1.html" target="fenêtrec">Curriculum Vitae</a></li>
+      <li><a href="formulaire2.html" target="fenêtrec">Enregistrement Étudiants</a></li>
+    </ul>
+    <div class="quit">
+      <a href="quitter.html" target="_top">Quitter</a>
+    </div>
+  </nav>
+</body>
+</html>

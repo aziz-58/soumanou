@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Enregistrement des étudiants</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #fff3e0);
+      margin: 0;
+      padding: 40px 10px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #e67e22;
+      margin-bottom: 30px;
+    }
+
+    fieldset {
+      border: 2px solid #f39c12;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    legend {
+      font-size: 20px;
+      color: #d35400;
+      font-weight: bold;
+      text-align: center;
+      padding: 0 10px;
+    }
+
+    .form-group, .form-row {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1.5px solid #ddd;
+      border-radius: 8px;
+      transition: 0.3s;
+      font-size: 14px;
+    }
+
+    input[type="text"]:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #e67e22;
+      outline: none;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      margin-right: 8px;
+    }
+
+    textarea {
+      height: 80px;
+      resize: vertical;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    button {
+      background-color: #e67e22;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ca5e17;
+    }
+
+    @media (max-width: 600px) {
+      .button-group {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Enregistrement des<br>Étudiants</h1>
+    <form method="post" action="traitement.php">
+      
+      <fieldset>
+        <legend>État Civil</legend>
+        <div class="form-group">
+          <label for="nom">Nom</label>
+          <input type="text" name="nom" id="nom" placeholder="Votre nom...">
+        </div>
+        <div class="form-group">
+          <label for="prenom">Prénoms</label>
+          <input type="text" name="prenom" id="prenom" placeholder="Votre prénom...">
+        </div>
+        <div class="form-group">
+          <label for="date_naissance">Date de naissance</label>
+          <input type="text" name="date_naissance" id="date_naissance" placeholder="JJ/MM/AAAA">
+        </div>
+        <div class="form-group">
+          <label for="sexe">Sexe</label>
+          <select name="sexe" id="sexe">
+            <option>Homme</option>
+            <option>Femme</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mail">Mail</label>
+          <input type="text" name="mail" id="mail" placeholder="exemple@email.com">
+        </div>
+        <div class="form-group">
+          <label for="contact">Contact</label>
+          <input type="text" name="contact" id="contact" placeholder="Numéro de téléphone...">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Diplômes</legend>
+        <label><input type="checkbox" name="cep"> CEP</label>
+        <label><input type="checkbox" name="bepc"> BEPC</label>
+        <label><input type="checkbox" name="bac"> BAC</label>
+        <label><input type="checkbox" name="bts"> BTS</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Adresse</legend>
+        <textarea name="adresse" id="adresse" placeholder="Votre adresse complète..."></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Pays</legend>
+        <label><input type="radio" name="pays" value="benin"> Bénin</label><br>
+        <label><input type="radio" name="pays" value="senegal"> Sénégal</label><br>
+        <label><input type="radio" name="pays" value="france"> France</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Boutons</legend>
+        <div class="button-group">
+          <button type="submit" onclick="alert('Formulaire envoyé !')">Envoyer</button>
+          <button type="reset">Effacer</button>
+          <button type="button" onclick="window.close()">Quitter</button>
+        </div>
+      </fieldset>
+
+    </form>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merci !</title>
+  <style>
+    /* Style de base pour la page */
+    body {
+      background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Dégradé chaud */
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* Animation du texte */
+    h1 {
+      font-size: 50px;
+      font-weight: bold;
+      animation: bounce 2s infinite, colorChange 3s ease-in-out infinite;
+      letter-spacing: 5px;
+      text-shadow: 0 0 10px #ff0, 0 0 20px #ff0, 0 0 30px #ff0; /* Effet lumineux */
+    }
+
+    /* Animation du texte qui rebondit */
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      30% {
+        transform: translateY(-20px);
+      }
+      50% {
+        transform: translateY(0);
+      }
+      70% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    /* Changement de couleur de texte */
+    @keyframes colorChange {
+      0% {
+        color: #ff7e5f;
+      }
+      50% {
+        color: #feb47b;
+      }
+      100% {
+        color: #ff7e5f;
+      }
+    }
+
+    /* Effet de particules */
+    .particles {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/asfalt-light.png') repeat;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Merci d'être venu sur mon site ! À la prochaine !</h1>
+
+  <!-- Effet de particules -->
+  <div class="particles"></div>
+
+</body>
+</html>
